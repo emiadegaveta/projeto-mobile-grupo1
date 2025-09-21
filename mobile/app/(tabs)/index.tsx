@@ -17,20 +17,22 @@ export default function HomeScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Projeto em produção</ThemedText>
+        <ThemedText type="title">Bem-Vindo(a)</ThemedText>
         <HelloWave />
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Página não finalizada</ThemedText>
-        <ThemedText>
-        <ThemedText type="defaultSemiBold">realizando as configurações necessárias</ThemedText>
-         
+        <ThemedText type="subtitle">Neste site iremos abordar sobre saúde e corpo humano,
         </ThemedText>
+        <ThemedText type="subtitle">bem como alimentação, exercícios físicos e entre outros temas que nos auxiliam a ter uma vida mais saudável e feliz. </ThemedText>
       </ThemedView>
+<Image
+  source={require('@/assets/images/saúde.jpg')}
+  style={{ width: 400, height: 350 }}
+/>
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Página em andamento</ThemedText>
         <ThemedText>
-          {`não há nada para visualizar aqui, por enquanto...`}
+          {`Agora há algo para visualizar (favor, NÃO REPARAR NA IMAGEM DE PÉSSIMA QUALIDADE. A desenvolvedora da página não se deu o trabalho de verificar os px :/)`}
         </ThemedText>
       </ThemedView>
       <ThemedView style={styles.stepContainer}>
@@ -40,7 +42,7 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">.</ThemedText> .
           <ThemedText type="defaultSemiBold">.</ThemedText> .
           <ThemedText type="defaultSemiBold">.</ThemedText> .
-          <ThemedText type="defaultSemiBold">.</ThemedText>.
+          <ThemedText type="defaultSemiBold">.</ThemedText> .
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
