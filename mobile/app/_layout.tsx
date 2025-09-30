@@ -9,7 +9,7 @@ import { useColorScheme } from '@/hooks/useColorScheme';
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SooraChenival: require('../assets/fonts/SooraChenival TTF.ttf'),
+    SpaceMono: require('../assets/fonts/SooraChenival TTF.ttf'),
   });
 
   if (!loaded) {
