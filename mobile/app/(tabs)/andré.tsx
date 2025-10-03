@@ -30,8 +30,12 @@ export default function TabTwoScreen() {
       style={{ width: 450, height: 235 }}
       />
       
-      <Collapsible title="Página em andamento...">
+      <Collapsible title="músculos">
       </Collapsible>
+      <Image
+  source={require('@/assets/images/musculo.webp')}
+  style={{ width: 400, height: 350 }}
+/>
       
       <Collapsible title="Volte em outro momento :)">
       </Collapsible>
