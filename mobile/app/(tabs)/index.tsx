@@ -11,7 +11,7 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#9966CC', dark: '#6A0DAD' }}
       headerImage={
         <Image
-          source={require('@/assets/images/esterela.png')}
+          source={require('@/assets/images/logo.cabeçalho.png')}
           style={styles.reactLogo}
         />
       }>
@@ -25,8 +25,8 @@ export default function HomeScreen() {
         <ThemedText type="subtitle">bem como alimentação, exercícios físicos e entre outros temas que nos auxiliam a ter uma vida mais saudável e feliz. </ThemedText>
       </ThemedView>
 <Image
-  source={require('@/assets/images/saúde.jpg')}
-  style={{ width: 400, height: 350 }}
+  source={require('@/assets/images/giphy.webp')}
+  style={{ width: 400, height: 350}}
 />
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Página em andamento</ThemedText>
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
   },
   reactLogo: {
     height: 250,
-    width: 290,
+    width: 3002,
     bottom: 0,
     left: 0,
     position: 'absolute',
