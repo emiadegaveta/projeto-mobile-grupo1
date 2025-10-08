@@ -1,4 +1,4 @@
-import { Image } from 'expo-image';
+import { Image, ImageBackground } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
@@ -7,12 +7,11 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { IconSymbol } from '@/components/ui/IconSymbol';
-import React from 'react';
 
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
+      headerBackgroundColor={{ light: '#B0E0E6', dark: '#B0E0E6' }}
       headerImage={
         <IconSymbol
           size={310}
@@ -25,6 +24,10 @@ export default function TabTwoScreen() {
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
       <ThemedText>This app includes example code to help you get started.</ThemedText>
+      <Image
+  source={require('@/assets/images/sono.webp')}
+  style={{ width: 400, height: 350 }}
+/>
       <Collapsible title="File-based routing">
         <ThemedText>
           This app has two screens:{' '}
