@@ -11,7 +11,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#8A2BE2 ', dark: '#4B0082' }}
+      headerBackgroundColor={{ light: '#8A2BE2', dark: '#4B0082' }}
       headerImage={
         <IconSymbol
           size={310}
@@ -26,7 +26,7 @@ export default function TabTwoScreen() {
       <ThemedText type="subtitle">A musculação e a alimentação saudável são pilares fundamentais para o bem-estar físico e mental. 
       Praticar exercícios regularmente e manter uma dieta equilibrada ajudam a fortalecer o corpo, prevenir doenças e melhorar a qualidade de vida.</ThemedText>
       <Image 
-      source={require('@/assets/images/alimentos.jpg')}
+      source={require('@/assets/images/imagem.corpoo.jpg')}
       style={{ width: 450, height: 235 }}
       />
       
@@ -40,10 +40,10 @@ export default function TabTwoScreen() {
       <Collapsible title="Volte em outro momento :)">
       </Collapsible>
       
-      <Collapsible title="...">  
+      <Collapsible title="músculos superiores">  
       </Collapsible>
 
-      <Collapsible title="...">
+      <Collapsible title="músculos inferiores">
       </Collapsible>
 
       <Collapsible title="...">  
