@@ -48,7 +48,8 @@ export default function HomeScreen() {
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create ({
+
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -59,10 +60,11 @@ const styles = StyleSheet.create({
     marginBottom: 8,
   },
   reactLogo: {
+    width: 800, 
     height: 250,
-    width: 3002,
     bottom: 0,
     left: 0,
     position: 'absolute',
-  },
+    resizeMode: 'contain',
+}
 });
