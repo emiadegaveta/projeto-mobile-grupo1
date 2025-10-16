@@ -60,8 +60,9 @@ const styles = StyleSheet.create ({
     marginBottom: 8,
   },
   reactLogo: {
-    width: 800, 
-    height: 250,
+    width: '100%', 
+    height: undefined,
+    aspectRatio: 3,
     bottom: 0,
     left: 0,
     position: 'absolute',
