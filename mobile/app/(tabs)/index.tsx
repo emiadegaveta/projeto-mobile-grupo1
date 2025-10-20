@@ -1,5 +1,7 @@
+// ...existing code...
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, Pressable, View } from 'react-native';
+import { useState } from 'react';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
@@ -13,38 +15,103 @@ export default function HomeScreen() {
         <Image
           source={require('@/assets/images/logo.cabeçalho.png')}
           style={styles.reactLogo}
+          contentFit="contain"
+          transition={300}
         />
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Bem-Vindo(a)</ThemedText>
         <HelloWave />
       </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Neste site iremos abordar sobre saúde e corpo humano,
+        <ThemedText type="subtitle">
+          Neste site iremos abordar sobre saúde e corpo humano, bem como alimentação, exercícios físicos e temas que nos auxiliam a ter uma vida mais saudável e feliz.
         </ThemedText>
-        <ThemedText type="subtitle">bem como alimentação, exercícios físicos e entre outros temas que nos auxiliam a ter uma vida mais saudável e feliz. </ThemedText>
       </ThemedView>
-<Image
-  source={require('@/assets/images/giphy.webp')}
-  style={{ width: 400, height: 350}}
-/>
+
+      <ThemedView style={styles.stepContainer}>
+        <InteractiveSection
+          title="Cérebro Humano"
+          summary="Entenda como manter o cérebro saudável e como isso impacta o corpo."
+          image={require('@/assets/images/giphy.webp')}
+        >
+          <ThemedText>
+            A musculação fortalece músculos e ossos; a alimentação correta fornece energia e recuperação. Pequenas mudanças consistentes fazem grande diferença.
+          </ThemedText>
+        </InteractiveSection>
+
+        <InteractiveSection
+          title="Músculos Superiores"
+          summary="Peito, costas, ombros e braços."
+          image={require('@/assets/images/musculo.webp')}
+        >
+          <ThemedText>
+            Exercícios compostos como supino e remada trabalham vários grupos ao mesmo tempo. Priorize forma correta e progressão de carga.
+          </ThemedText>
+        </InteractiveSection>
+
+        <InteractiveSection
+          title="Músculos Inferiores"
+          summary="Pernas e glúteos: base da força."
+          image={require('@/assets/images/imagem.corpoo.jpg')}
+        >
+          <ThemedText>
+            Agachamentos e levantamento terra são fundamentais; foque em mobilidade e equilíbrio para treinos seguros.
+          </ThemedText>
+        </InteractiveSection>
+      </ThemedView>
+
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Página em andamento</ThemedText>
         <ThemedText>
-          {`Agora há algo para visualizar (favor, NÃO REPARAR NA IMAGEM DE PÉSSIMA QUALIDADE. A desenvolvedora da página não se deu o trabalho de verificar os px :/)`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Página inicial gerenciada por emillya</ThemedText>
-        <ThemedText>
-         .
-          <ThemedText type="defaultSemiBold">.</ThemedText> .
-          <ThemedText type="defaultSemiBold">.</ThemedText> .
-          <ThemedText type="defaultSemiBold">.</ThemedText> .
-          <ThemedText type="defaultSemiBold">.</ThemedText> .
+          {`Agora há algo para visualizar — conteúdo será ampliado em breve.`}
         </ThemedText>
       </ThemedView>
     </ParallaxScrollView>
+  );
+}
+
+
+function ActionButton({ label, onPress }: { label: string; onPress: () => void }) {
+  return (
+    <Pressable style={({ pressed }) => [styles.actionButton, pressed && styles.actionButtonPressed]} onPress={onPress}>
+      <ThemedText type="defaultSemiBold" style={styles.actionLabel}>{label}</ThemedText>
+    </Pressable>
+  );
+}
+
+function InteractiveSection({
+  title,
+  summary,
+  children,
+  image,
+}: {
+  title: string;
+  summary?: string;
+  children: React.ReactNode;
+  image?: any;
+}) {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <View style={styles.card}>
+      <Pressable onPress={() => setOpen(v => !v)} style={styles.cardHeader}>
+        <ThemedText type="subtitle" style={styles.cardTitle}>{title}</ThemedText>
+        <ThemedText>{open ? '−' : '+'}</ThemedText>
+      </Pressable>
+
+      <ThemedText type="default" style={styles.cardSummary}>{summary}</ThemedText>
+
+      {open && (
+        <View style={styles.cardBody}>
+          {children}
+          {image && (
+            <Image source={image} style={styles.cardImage} contentFit="cover" transition={200} />
+          )}
+        </View>
+      )}
+    </View>
   );
 }
 
@@ -56,16 +123,77 @@ const styles = StyleSheet.create ({
     gap: 8,
   },
   stepContainer: {
+    gap: 12,
+    marginBottom: 16,
+    paddingHorizontal: 12,
+  },
+
+  /* Header image */
+  reactLogo: {
+   aspectRatio: 3,
+   bottom: 0,
+   resizeMode: 'contain',
+   width: '100%',
+   height: 220,     
+   position: 'absolute',
+   top: 0,
+   left: 0,
+  },
+
+
+  actionsRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: 12,
+    marginVertical: 12,
     gap: 8,
+  },
+  actionButton: {
+    flex: 1,
+    backgroundColor: '#EDE7F6',
+    paddingVertical: 10,
+    marginHorizontal: 4,
+    borderRadius: 10,
+    alignItems: 'center',
+  },
+  actionButtonPressed: {
+    opacity: 0.8,
+  },
+  actionLabel: {
+    color: '#4B0082',
+  },
+
+  card: {
+    backgroundColor: '#fff',
+    borderRadius: 12,
+    padding: 12,
+    marginBottom: 12,
+    shadowColor: '#000',
+    shadowOpacity: 0.06,
+    shadowRadius: 6,
+    elevation: 2,
+  },
+  cardHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  cardTitle: {
+    fontSize: 16,
+  },
+  cardSummary: {
+    color: '#666',
+    marginTop: 6,
     marginBottom: 8,
   },
-  reactLogo: {
-    width: '100%', 
-    height: undefined,
-    aspectRatio: 3,
-    bottom: 0,
-    left: 0,
-    position: 'absolute',
-    resizeMode: 'contain',
-}
+  cardBody: {
+    marginTop: 8,
+    gap: 8,
+  },
+  cardImage: {
+    width: '100%',
+    height: 180,
+    borderRadius: 8,
+    marginTop: 8,
+  },
 });
