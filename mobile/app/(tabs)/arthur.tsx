@@ -1,4 +1,4 @@
-import { Image, ImageBackground } from 'expo-image';
+import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
@@ -21,9 +21,9 @@ export default function TabTwoScreen() {
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">sono</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
+      <ThemedText>aqui iremos falar tudo sobre sono, no que ele ajuda e no que ele atrapalha.</ThemedText>
       <Image
   source={require('@/assets/images/sono.webp')}
   style={{ width: 400, height: 350 }}
@@ -110,5 +110,7 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+    fontSize: 50,
   },
+
 });
