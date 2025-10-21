@@ -6,29 +6,38 @@ import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { IconSymbol } from '@/components/ui/IconSymbol';
 
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#FAD0C5', dark: '#4B0082' }}
+      headerBackgroundColor={{ light: '#F8E0DE', dark: '#8B0000' }} // tons claros/escuros de cérebro
+      // 🧠 Cabeçalho personalizado com cores temáticas
       headerImage={
-        <Image
-          source={require('@/assets/images/cerebelo.webp')}
-          style={{ width: 450, height: 235 }}
-        />
-      }>
+        <ThemedView style={styles.header}>
+          <Image
+            source={require('@/assets/images/cerebelo.webp')}
+            style={styles.headerImage}
+          />
+          <ThemedText type="title" style={styles.headerTitle}>
+            O Cérebro Humano
+          </ThemedText>
+          <ThemedText style={styles.headerSubtitle}>
+            Desenvolvido por Davi de Freitas
+          </ThemedText>
+        </ThemedView>
+      }
+    >
 
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
       
       <Collapsible title="Images">
-        <Image source={require('@/assets/images/react-logo.png')} style={{ alignSelf: 'center' }} />
         <ExternalLink href="https://reactnative.dev/docs/images">
           <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
       </Collapsible>
+
       <Collapsible title="Custom fonts">
         <ThemedText>
           Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
@@ -40,6 +49,7 @@ export default function TabTwoScreen() {
           <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
       </Collapsible>
+
       <Collapsible title="Light and dark mode components">
         <ThemedText>
           This template has light and dark mode support. The{' '}
@@ -50,6 +60,7 @@ export default function TabTwoScreen() {
           <ThemedText type="link">Learn more</ThemedText>
         </ExternalLink>
       </Collapsible>
+
       <Collapsible title="Página em desenvolvimento, feita por davi de freitas">
         <ThemedText>
           This template includes an example of an animated component. The{' '}
@@ -71,12 +82,35 @@ export default function TabTwoScreen() {
 }
 
 const styles = StyleSheet.create({
-  headerImage: {
-    color: '#808080',
-    bottom: -90,
-    left: -35,
-    position: 'absolute',
+  // Cabeçalho personalizado com cores temáticas
+  header: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 20,
+    backgroundColor: '#F8D3CB', // tom rosado suave de cérebro
+    borderBottomWidth: 1,
+    borderBottomColor: '#E07B7B', // tom vermelho claro
   },
+  headerImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 10,
+  },
+  headerTitle: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#8B0000', // vermelho escuro
+  },
+  headerSubtitle: {
+    fontSize: 14,
+    opacity: 0.8,
+    textAlign: 'center',
+    color: '#A52A2A', // marrom avermelhado
+  },
+
+  // Conteúdo existente
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
