@@ -31,35 +31,31 @@ export default function HomeScreen() {
       </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
+        <ThemedText type="title">Confira os assuntos abordados:</ThemedText>
         <InteractiveSection
           title="Cérebro Humano"
           summary="Entenda como manter o cérebro saudável e como isso impacta o corpo."
-          image={require('@/assets/images/giphy.webp')}
-        >
-          <ThemedText>
-            A musculação fortalece músculos e ossos; a alimentação correta fornece energia e recuperação. Pequenas mudanças consistentes fazem grande diferença.
-          </ThemedText>
-        </InteractiveSection>
+          image={require('@/assets/images/cerebelo.webp')}
+        > </InteractiveSection>
 
         <InteractiveSection
-          title="Músculos Superiores"
-          summary="Peito, costas, ombros e braços."
+          title="Músculos e Alimentação saudável"
+          summary="Saiba a importância de uma boa alimentação e como ela afeta os músculos."
           image={require('@/assets/images/musculo.webp')}
-        >
-          <ThemedText>
-            Exercícios compostos como supino e remada trabalham vários grupos ao mesmo tempo. Priorize forma correta e progressão de carga.
-          </ThemedText>
-        </InteractiveSection>
+        > </InteractiveSection>
 
         <InteractiveSection
-          title="Músculos Inferiores"
-          summary="Pernas e glúteos: base da força."
+          title="Saúde do Sono"
+          summary="Por que o sono é vital para a saúde geral do corpo e da mente."
           image={require('@/assets/images/imagem.corpoo.jpg')}
-        >
-          <ThemedText>
-            Agachamentos e levantamento terra são fundamentais; foque em mobilidade e equilíbrio para treinos seguros.
-          </ThemedText>
-        </InteractiveSection>
+        > </InteractiveSection>
+
+         <InteractiveSection
+          title="Problemas de saúde"
+          summary="Os principais problemas de saúde, como evitá-los e como afetam o corpo humano."
+          image={require('@/assets/images/imagem.corpoo.jpg')}
+        > </InteractiveSection>
+
       </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
@@ -71,7 +67,6 @@ export default function HomeScreen() {
     </ParallaxScrollView>
   );
 }
-
 
 function ActionButton({ label, onPress }: { label: string; onPress: () => void }) {
   return (
