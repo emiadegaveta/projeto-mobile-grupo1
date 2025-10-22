@@ -1,4 +1,3 @@
-// ...existing code...
 import { Image } from 'expo-image';
 import { Platform, StyleSheet, Pressable, View } from 'react-native';
 import { useState } from 'react';
@@ -41,19 +40,19 @@ export default function HomeScreen() {
         <InteractiveSection
           title="Músculos e Alimentação saudável"
           summary="Saiba a importância de uma boa alimentação e como ela afeta os músculos."
-          image={require('@/assets/images/musculo.webp')}
+          image={require('@/assets/images/salada.jpg')}
         > </InteractiveSection>
 
         <InteractiveSection
           title="Saúde do Sono"
           summary="Por que o sono é vital para a saúde geral do corpo e da mente."
-          image={require('@/assets/images/imagem.corpoo.jpg')}
+          image={require('@/assets/images/sono.webp')}
         > </InteractiveSection>
 
          <InteractiveSection
           title="Problemas de saúde"
           summary="Os principais problemas de saúde, como evitá-los e como afetam o corpo humano."
-          image={require('@/assets/images/imagem.corpoo.jpg')}
+          image={require('@/assets/images/problemas.jpg')}
         > </InteractiveSection>
 
       </ThemedView>
@@ -123,7 +122,7 @@ const styles = StyleSheet.create ({
     paddingHorizontal: 12,
   },
 
-  /* Header image */
+
   reactLogo: {
    aspectRatio: 3,
    bottom: 0,
