@@ -23,7 +23,9 @@ export default function TabTwoScreen() {
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">sono</ThemedText>
       </ThemedView>
-      <ThemedText>aqui iremos falar tudo sobre sono, no que ele ajuda e no que ele atrapalha.</ThemedText>
+      <ThemedText type="subtitle">aqui iremos falar tudo sobre sono, no que ele ajuda e no que ele atrapalha. È um estado fisiológico de descnaços com ciclos de atividades reduzida e é vital para a saúde física e mental. </ThemedText>
+      <ThemedText type="subtitle"> <ThemedText type="subtitle"> </ThemedText>
+</ThemedText>
       <Image
   source={require('@/assets/images/sono.webp')}
   style={{ width: 400, height: 350 }}
@@ -103,8 +105,8 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   headerImage: {
     color: '#808080',
-    bottom: -90,
-    left: -35,
+    bottom: -20,
+    left: 600,
     position: 'absolute',
   },
   titleContainer: {
