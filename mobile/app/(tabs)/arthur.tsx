@@ -1,4 +1,4 @@
-import { Image, ImageBackground } from 'expo-image';
+import { Image } from 'expo-image';
 import { Platform, StyleSheet } from 'react-native';
 
 import { Collapsible } from '@/components/Collapsible';
@@ -28,7 +28,7 @@ export default function TabTwoScreen() {
   source={require('@/assets/images/sono.webp')}
   style={{ width: 400, height: 350 }}
 />
-      <Collapsible title="File-based routing">
+      <Collapsible title="sono">
         <ThemedText>
           This app has two screens:{' '}
           <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
