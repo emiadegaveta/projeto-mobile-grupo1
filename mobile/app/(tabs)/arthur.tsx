@@ -11,19 +11,21 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 export default function TabTwoScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#B0E0E6', dark: '#B0E0E6' }}
+      headerBackgroundColor={{ light: '#120A8F', dark: '#2271B3' }}
       headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
+        <Image
+          source={require('@/assets/images/2325590-1.jpg')}
           style={styles.headerImage}
+          contentFit="contain"
+          transition={300}
         />
       }>
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+        <ThemedText type="title">Qualidade de sono</ThemedText>
       </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
+      <ThemedText type="subtitle">aqui iremos falar tudo sobre sono, no que ele ajuda e no que ele atrapalha. È um estado fisiológico de descanços com ciclos de atividades reduzida e é vital para a saúde física e mental. </ThemedText>
+      <ThemedText type="subtitle">abaixo desta imagens temos todos os tipos de sone: <ThemedText type="subtitle"> </ThemedText>
+</ThemedText>
       <Image
   source={require('@/assets/images/sono.webp')}
   style={{ width: 400, height: 350 }}
@@ -44,7 +46,7 @@ export default function TabTwoScreen() {
       </Collapsible>
       <Collapsible title="Android, iOS, and web support">
         <ThemedText>
-          You can open this project on Android, iOS, and the web. To open the web version, press{' '}
+          You can open this project on sono, iOS, and the web. To open the web version, press{' '}
           <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
         </ThemedText>
       </Collapsible>
@@ -103,12 +105,14 @@ export default function TabTwoScreen() {
 const styles = StyleSheet.create({
   headerImage: {
     color: '#808080',
-    bottom: -90,
-    left: -35,
+    bottom: -20,
+    left: 600,
     position: 'absolute',
   },
   titleContainer: {
     flexDirection: 'row',
     gap: 8,
+    fontSize: 50,
   },
+
 });
