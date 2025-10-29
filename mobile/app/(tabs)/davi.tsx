@@ -1,118 +1,166 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
-
-import { Collapsible } from '@/components/Collapsible';
-import { ExternalLink } from '@/components/ExternalLink';
-import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Image } from 'expo-image';
+import { ScrollView, StyleSheet, View } from 'react-native';
 
-export default function TabTwoScreen() {
+export default function CerebroHumanoScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: '#F8E0DE', dark: '#8B0000' }} // tons claros/escuros de cérebro
-      // 🧠 Cabeçalho personalizado com cores temáticas
-      headerImage={
-        <ThemedView style={styles.header}>
-          <Image
-            source={require('@/assets/images/cerebelo.webp')}
-            style={styles.headerImage}
-          />
-          <ThemedText type="title" style={styles.headerTitle}>
-            O Cérebro Humano
-          </ThemedText>
-          <ThemedText style={styles.headerSubtitle}>
-            Desenvolvido por Davi de Freitas
-          </ThemedText>
-        </ThemedView>
-      }
-    >
-
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Explore</ThemedText>
+    <ScrollView style={styles.container}>
+      {/* Cabeçalho */}
+      <ThemedView style={styles.header}>
+        <Image
+          source={require('@/assets/images/cerebelo.webp')}
+          style={styles.headerImage}
+        />
+        <ThemedText type="title" style={styles.headerTitle}>
+          O Cérebro Humano
+        </ThemedText>
+        <ThemedText style={styles.headerSubtitle}>
+          Desenvolvido por Davi de Freitas
+        </ThemedText>
       </ThemedView>
-      
-      <Collapsible title="Images">
-        <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
 
-      <Collapsible title="Custom fonts">
-        <ThemedText>
-          Open <ThemedText type="defaultSemiBold">app/_layout.tsx</ThemedText> to see how to load{' '}
-          <ThemedText style={{ fontFamily: 'SpaceMono' }}>
-            custom fonts such as this one.
-          </ThemedText>
+      {/* Introdução */}
+      <View style={styles.section}>
+        <ThemedText style={styles.sectionTitle}>Introdução</ThemedText>
+        <ThemedText style={styles.paragraph}>
+          O cérebro humano é o órgão mais complexo do corpo. Ele comanda
+          pensamentos, emoções, memória e movimentos, sendo o centro da
+          consciência e da personalidade humana.
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/versions/latest/sdk/font">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
+      </View>
 
-      <Collapsible title="Light and dark mode components">
-        <ThemedText>
-          This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
+      {/* Estrutura */}
+      <View style={styles.section}>
+        <ThemedText style={styles.sectionTitle}>Estrutura do Cérebro</ThemedText>
+        <ThemedText style={styles.paragraph}>
+          O cérebro é dividido em três grandes regiões:
         </ThemedText>
-        <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
-        </ExternalLink>
-      </Collapsible>
+        <ThemedText style={styles.paragraph}>
+          <ThemedText type="defaultSemiBold">Cérebro (Telencéfalo):</ThemedText> controla as funções
+          cognitivas, como pensamento e linguagem.
+        </ThemedText>
+        <ThemedText style={styles.paragraph}>
+          <ThemedText type="defaultSemiBold">Cerebelo:</ThemedText> coordena o equilíbrio e os
+          movimentos, garantindo precisão motora.
+        </ThemedText>
+        <ThemedText style={styles.paragraph}>
+          <ThemedText type="defaultSemiBold">Tronco encefálico:</ThemedText> regula funções vitais
+          como respiração e batimentos cardíacos.
+        </ThemedText>
+      </View>
 
-      <Collapsible title="Página em desenvolvimento, feita por davi de freitas">
-        <ThemedText>
-          This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
-          the powerful <ThemedText type="defaultSemiBold">react-native-reanimated</ThemedText>{' '}
-          library to create a waving hand animation.
+      {/* Funções */}
+      <View style={styles.section}>
+        <ThemedText style={styles.sectionTitle}>Funções do Cérebro</ThemedText>
+        <ThemedText style={styles.paragraph}>
+          O cérebro interpreta informações sensoriais e envia comandos para o
+          corpo. Cada hemisfério atua de maneira distinta: o esquerdo é lógico
+          e analítico, enquanto o direito é criativo e intuitivo.
         </ThemedText>
-        {Platform.select({
-          ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
-              component provides a parallax effect for the header image.
-            </ThemedText>
-          ),
-        })}
-      </Collapsible>
-    </ParallaxScrollView>
+      </View>
+
+      {/* Curiosidades */}
+      <View style={styles.section}>
+        <ThemedText style={styles.sectionTitle}>Curiosidades</ThemedText>
+        <ThemedText style={styles.paragraph}>
+          • O cérebro consome cerca de 20% da energia do corpo.{'\n'}
+          • Contém aproximadamente 86 bilhões de neurônios.{'\n'}
+          • Durante o sono, o cérebro reorganiza memórias e limpa toxinas.{'\n'}
+          • Emoções e decisões são formadas em redes neurais complexas.
+        </ThemedText>
+      </View>
+
+      {/* Conclusão */}
+      <View style={styles.section}>
+        <ThemedText style={styles.sectionTitle}>Conclusão</ThemedText>
+        <ThemedText style={styles.paragraph}>
+          Compreender o cérebro é compreender a si mesmo. É nele que nascem
+          nossos pensamentos, emoções e sonhos. Estudar o cérebro é mergulhar
+          nas origens da consciência humana.
+        </ThemedText>
+      </View>
+
+      {/* Rodapé */}
+      <View style={styles.footer}>
+        <ThemedText style={styles.footerText}>
+          © 2025 — Desenvolvido por Davi de Freitas | Projeto de Neurociência
+        </ThemedText>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  // Cabeçalho personalizado com cores temáticas
+  container: {
+    flex: 1,
+    backgroundColor: '#F4F1F9',
+  },
   header: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 20,
-    backgroundColor: '#F8D3CB', // tom rosado suave de cérebro
-    borderBottomWidth: 1,
-    borderBottomColor: '#E07B7B', // tom vermelho claro
+    backgroundColor: '#DCC9E6',
+    paddingVertical: 28,
+    borderBottomWidth: 2,
+    borderBottomColor: '#A895C9',
   },
   headerImage: {
-    width: 100,
-    height: 100,
-    borderRadius: 50,
-    marginBottom: 10,
+    width: 120,
+    height: 120,
+    borderRadius: 60,
+    marginBottom: 12,
+    borderWidth: 2,
+    borderColor: '#BFA7E2',
   },
   headerTitle: {
-    fontSize: 22,
+    fontSize: 26,
     fontWeight: 'bold',
+    color: '#3A226E',
     textAlign: 'center',
-    color: '#8B0000', // vermelho escuro
   },
   headerSubtitle: {
-    fontSize: 14,
+    fontSize: 15,
+    color: '#5D3D9B',
+    opacity: 0.9,
+  },
+  section: {
+    paddingHorizontal: 20,
+    paddingVertical: 18,
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 14,
+    marginVertical: 8,
+    borderRadius: 14,
+    shadowColor: '#000',
+    shadowOpacity: 0.06,
+    shadowRadius: 4,
+    elevation: 2,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: '#37245F', // mais escuro, destaque
+    marginBottom: 10,
+    textShadowColor: 'rgba(80, 60, 120, 0.25)', // brilho leve
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 3,
+  },
+  paragraph: {
+    fontSize: 16,
+    lineHeight: 24,
+    color: '#3B2F42',
+    textAlign: 'justify',
+    marginTop: 8,
+  },
+  footer: {
+    padding: 20,
+    alignItems: 'center',
+    backgroundColor: '#DCC9E6',
+    marginTop: 16,
+  },
+  footerText: {
+    fontSize: 13,
+    color: '#4C2A85',
     opacity: 0.8,
     textAlign: 'center',
-    color: '#A52A2A', // marrom avermelhado
-  },
-
-  // Conteúdo existente
-  titleContainer: {
-    flexDirection: 'row',
-    gap: 8,
   },
 });

@@ -58,13 +58,9 @@ export default function HomeScreen() {
       </ThemedView>
 
       <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Página em andamento</ThemedText>
-        <ThemedText>
-          {`Agora há algo para visualizar — conteúdo será ampliado em breve.`}
-        </ThemedText>
       </ThemedView>
-    </ParallaxScrollView>
-  );
+      </ParallaxScrollView>
+   );
 }
 
 function ActionButton({ label, onPress }: { label: string; onPress: () => void }) {
@@ -116,12 +112,12 @@ const styles = StyleSheet.create ({
     alignItems: 'center',
     gap: 8,
   },
+
   stepContainer: {
     gap: 12,
     marginBottom: 16,
     paddingHorizontal: 12,
   },
-
 
   reactLogo: {
    aspectRatio: 3,
@@ -134,7 +130,6 @@ const styles = StyleSheet.create ({
    left: 0,
   },
 
-
   actionsRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -142,6 +137,7 @@ const styles = StyleSheet.create ({
     marginVertical: 12,
     gap: 8,
   },
+
   actionButton: {
     flex: 1,
     backgroundColor: '#EDE7F6',
@@ -150,9 +146,11 @@ const styles = StyleSheet.create ({
     borderRadius: 10,
     alignItems: 'center',
   },
+
   actionButtonPressed: {
     opacity: 0.8,
   },
+
   actionLabel: {
     color: '#4B0082',
   },
@@ -176,7 +174,7 @@ const styles = StyleSheet.create ({
     fontSize: 16,
   },
   cardSummary: {
-    color: '#666',
+    color: '#',
     marginTop: 6,
     marginBottom: 8,
   },
@@ -186,7 +184,7 @@ const styles = StyleSheet.create ({
   },
   cardImage: {
     width: '100%',
-    height: 180,
+    height: 300,
     borderRadius: 8,
     marginTop: 8,
   },
