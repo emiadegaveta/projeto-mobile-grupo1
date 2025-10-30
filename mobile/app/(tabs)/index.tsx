@@ -9,14 +9,14 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-      headerBackgroundColor={{ light: '#9966CC', dark: '#6A0DAD' }}
-      headerImage={
+    headerBackgroundColor={{ light: '#9966CC', dark: '#6A0DAD' }}
+      headerImage={ 
         <Image
-          source={require('@/assets/images/logo.cabeçalho.png')}
+          source={require('@/assets/images/coração.png')}
           style={styles.reactLogo}
           contentFit="contain"
           transition={300}
-        />
+        /> 
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Bem-Vindo(a)</ThemedText>
@@ -25,7 +25,7 @@ export default function HomeScreen() {
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">
-          Neste site iremos abordar sobre saúde e corpo humano, bem como alimentação, exercícios físicos e temas que nos auxiliam a ter uma vida mais saudável e feliz.
+          Neste site iremos abordar sobre saúde e corpo humano aaaa, bem como alimentação, exercícios físicos e temas que nos auxiliam a ter uma vida mais saudável e feliz.
         </ThemedText>
       </ThemedView>
 
