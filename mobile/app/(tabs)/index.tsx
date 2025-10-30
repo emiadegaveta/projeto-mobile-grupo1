@@ -51,7 +51,7 @@ export default function HomeScreen() {
 
          <InteractiveSection
           title="Problemas de saúde"
-          summary="Os principais problemas de saúde, como evitá-los e como afetam o corpo humano."
+          summary="Os principais problemas de saúaaaaaaaaaaaaade, como evitá-los e como afetam o corpo humano."
           image={require('@/assets/images/problemas.jpg')}
         > </InteractiveSection>
 
