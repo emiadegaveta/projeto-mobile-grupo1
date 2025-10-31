@@ -9,7 +9,7 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-    headerBackgroundColor={{ light: '#9966CC', dark: '#6A0DAD' }}
+    headerBackgroundColor={{ light: '#7B0BE0', dark: '#7B0BE0' }}
       headerImage={ 
         <Image
           source={require('@/assets/images/coração.png')}
@@ -25,7 +25,7 @@ export default function HomeScreen() {
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">
-          Neste site iremos abordar sobre saúde e corpo humano aaaa, bem como alimentação, exercícios físicos e temas que nos auxiliam a ter uma vida mais saudável e feliz.
+          Neste site iremos abordar sobre saúde e corpo humano, bem como alimentação, exercícios físicos e temas que nos auxiliam a ter uma vida mais saudável e feliz.
         </ThemedText>
       </ThemedView>
 
@@ -51,7 +51,7 @@ export default function HomeScreen() {
 
          <InteractiveSection
           title="Problemas de saúde"
-          summary="Os principais problemas de saúaaaaaaaaaaaaade, como evitá-los e como afetam o corpo humano."
+          summary="Os principais problemas de saúde, como evitá-los e como afetam o corpo humano."
           image={require('@/assets/images/problemas.jpg')}
         > </InteractiveSection>
 
@@ -115,7 +115,7 @@ const styles = StyleSheet.create ({
 
   stepContainer: {
     gap: 12,
-    marginBottom: 16,
+    marginBottom: 0,
     paddingHorizontal: 12,
   },
 
@@ -126,7 +126,7 @@ const styles = StyleSheet.create ({
    width: '100%',
    height: 220,     
    position: 'absolute',
-   top: 0,
+   top: 20,
    left: 0,
   },
 
@@ -143,7 +143,7 @@ const styles = StyleSheet.create ({
     backgroundColor: '#EDE7F6',
     paddingVertical: 10,
     marginHorizontal: 4,
-    borderRadius: 10,
+    borderRadius: 50,
     alignItems: 'center',
   },
 
@@ -156,7 +156,7 @@ const styles = StyleSheet.create ({
   },
 
   card: {
-    backgroundColor: '#fff',
+    backgroundColor: '#7B0BE0',
     borderRadius: 12,
     padding: 12,
     marginBottom: 12,
@@ -171,7 +171,7 @@ const styles = StyleSheet.create ({
     alignItems: 'center',
   },
   cardTitle: {
-    fontSize: 16,
+    fontSize: 18,
   },
   cardSummary: {
     color: '#',
@@ -179,7 +179,7 @@ const styles = StyleSheet.create ({
     marginBottom: 8,
   },
   cardBody: {
-    marginTop: 8,
+    marginTop: 7,
     gap: 8,
   },
   cardImage: {
