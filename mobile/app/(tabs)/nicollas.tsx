@@ -1,4 +1,4 @@
-import { Alert, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Alert, Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 export default function SaudeBemEstar() {
   const handlePress = () => {
@@ -14,7 +14,7 @@ export default function SaudeBemEstar() {
         </Text>
       </View>
       <Image
-        source={{ uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzwBTzlTYbCUn1gWdzAxEEh2jjv8ptH_3OQA&s' }}
+        source={{ uri: 'https://www.onodera.com.br/media/cache/1/1136x410/ac7fca02c77817f9150e17969b74630a/onodera-saude-e-bem-estar.jpg' }}
         style={styles.image}
       />
 
@@ -29,22 +29,16 @@ export default function SaudeBemEstar() {
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>° Atividade Física</Text>
         <Text style={styles.text}>
-          Praticar exercícios melhora o humor, fortalece o corpo e ajuda a manter a mente saudável.
+          A atividade física é essencial para a saúde e bem-estar, pois fortalece o corpo, previnindo doenças crônicas como diabetes e hipertensão, melhora a saúde mental ao reduzir estresse e ansiedade, aumenta a disposição, a qualidade do sono e ainda contribui para o desenvolvimento cognitivo e a socialização.
         </Text>
       </View>
 
       <View style={styles.section}>
         <Text style={styles.sectionTitle}>° Saúde Mental</Text>
         <Text style={styles.text}>
-          Reserve um tempo para relaxar, meditar e conversar com quem você gosta.
-          Cuidar das emoções também é cuidar da saúde!
+          A saúde mental é um componente fundamental do bem-estar, que abrange o equilíbrio emocional, psicológico e social, permitindo lidar com o estresse, desenvolver habilidades e ter uma vida produtiva e comunitária. Ela não é a ausência de problemas, mas sim a capacidade de enfrentá-los com resiliência.
         </Text>
       </View>
-
-      {/* Botão */}
-      <TouchableOpacity style={styles.button} onPress={handlePress}>
-        <Text style={styles.buttonText}>Receber Dica do Dia 🌞</Text>
-      </TouchableOpacity>
     </ScrollView>
   );
 }
@@ -56,10 +50,10 @@ const styles = StyleSheet.create({
   },
   header: {
     alignItems: 'center',
-    paddingVertical: 20,
+    paddingVertical: 90,
     backgroundColor: '#A5D6A7',
-    borderBottomLeftRadius: 20,
-    borderBottomRightRadius: 20,
+    borderBottomLeftRadius: 0,
+    borderBottomRightRadius: 0,
   },
   title: {
     fontSize: 28,
@@ -73,7 +67,7 @@ const styles = StyleSheet.create({
   },
   image: {
     width: '90%',
-    height: 200,
+    height: 500,
     borderRadius: 15,
     alignSelf: 'center',
     marginVertical: 20,
