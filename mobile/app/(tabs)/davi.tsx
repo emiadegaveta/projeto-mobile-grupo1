@@ -6,7 +6,7 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 export default function CerebroHumanoScreen() {
   return (
     <ScrollView style={styles.container}>
-      {/* Cabeçalho */}
+
       <ThemedView style={styles.header}>
         <Image
           source={require('@/assets/images/cerebelo.webp')}
@@ -20,7 +20,6 @@ export default function CerebroHumanoScreen() {
         </ThemedText>
       </ThemedView>
 
-      {/* Introdução */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Introdução</ThemedText>
         <ThemedText style={styles.paragraph}>
@@ -30,27 +29,25 @@ export default function CerebroHumanoScreen() {
         </ThemedText>
       </View>
 
-      {/* Estrutura */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Estrutura do Cérebro</ThemedText>
         <ThemedText style={styles.paragraph}>
           O cérebro é dividido em três grandes regiões:
         </ThemedText>
         <ThemedText style={styles.paragraph}>
-          <ThemedText type="defaultSemiBold">Cérebro (Telencéfalo):</ThemedText> controla as funções
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Cérebro (Telencéfalo):</ThemedText> controla as funções
           cognitivas, como pensamento e linguagem.
         </ThemedText>
         <ThemedText style={styles.paragraph}>
-          <ThemedText type="defaultSemiBold">Cerebelo:</ThemedText> coordena o equilíbrio e os
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Cerebelo:</ThemedText> coordena o equilíbrio e os
           movimentos, garantindo precisão motora.
         </ThemedText>
         <ThemedText style={styles.paragraph}>
-          <ThemedText type="defaultSemiBold">Tronco encefálico:</ThemedText> regula funções vitais
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Tronco encefálico:</ThemedText> regula funções vitais
           como respiração e batimentos cardíacos.
         </ThemedText>
       </View>
 
-      {/* Funções */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Funções do Cérebro</ThemedText>
         <ThemedText style={styles.paragraph}>
@@ -60,7 +57,6 @@ export default function CerebroHumanoScreen() {
         </ThemedText>
       </View>
 
-      {/* Curiosidades */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Curiosidades</ThemedText>
         <ThemedText style={styles.paragraph}>
@@ -71,7 +67,6 @@ export default function CerebroHumanoScreen() {
         </ThemedText>
       </View>
 
-      {/* Conclusão */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Conclusão</ThemedText>
         <ThemedText style={styles.paragraph}>
@@ -81,7 +76,6 @@ export default function CerebroHumanoScreen() {
         </ThemedText>
       </View>
 
-      {/* Rodapé */}
       <View style={styles.footer}>
         <ThemedText style={styles.footerText}>
           © 2025 — Desenvolvido por Davi de Freitas | Projeto de Neurociência
@@ -96,6 +90,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#F4F1F9',
   },
+
   header: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -104,6 +99,7 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: '#A895C9',
   },
+
   headerImage: {
     width: 120,
     height: 120,
@@ -112,17 +108,20 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: '#BFA7E2',
   },
+
   headerTitle: {
     fontSize: 26,
     fontWeight: 'bold',
     color: '#3A226E',
     textAlign: 'center',
   },
+
   headerSubtitle: {
     fontSize: 15,
     color: '#5D3D9B',
     opacity: 0.9,
   },
+
   section: {
     paddingHorizontal: 20,
     paddingVertical: 18,
@@ -135,15 +134,21 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
+
   sectionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#37245F', // mais escuro, destaque
+    color: '#37245F', 
     marginBottom: 10,
-    textShadowColor: 'rgba(80, 60, 120, 0.25)', // brilho leve
+    textShadowColor: 'rgba(80, 60, 120, 0.25)', 
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 3,
   },
+
+  topicTitle: {
+    color: '#37245F',
+  },
+
   paragraph: {
     fontSize: 16,
     lineHeight: 24,
@@ -151,12 +156,14 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
     marginTop: 8,
   },
+  
   footer: {
     padding: 20,
     alignItems: 'center',
     backgroundColor: '#DCC9E6',
     marginTop: 16,
   },
+  
   footerText: {
     fontSize: 13,
     color: '#4C2A85',
