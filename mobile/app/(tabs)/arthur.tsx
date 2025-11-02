@@ -6,7 +6,6 @@ import { ScrollView, StyleSheet, View } from 'react-native';
 export default function CerebroHumanoScreen() {
   return (
     <ScrollView style={styles.container}>
-      {/* Cabeçalho */}
       <ThemedView style={styles.header}>
         <Image
           source={require('@/assets/images/2325590-1.jpg')}
@@ -20,7 +19,6 @@ export default function CerebroHumanoScreen() {
         </ThemedText>
       </ThemedView>
 
-      {/* Introdução */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Introdução</ThemedText>
         <ThemedText style={styles.paragraph}>
@@ -28,23 +26,21 @@ export default function CerebroHumanoScreen() {
         </ThemedText>
       </View>
 
-      {/* Estrutura */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Estrutura do Sono</ThemedText>
         <ThemedText style={styles.paragraph}>
           A estrutura do sono é composta por ciclos de 90 a 120 minutos, que alternam entre duas fases principais: o sono não-REM (NREM) e o sono REM (movimento rápido dos olhos).
         </ThemedText>
         <ThemedText style={styles.paragraph}>
-          <ThemedText type="defaultSemiBold">Não-REM (NREM):</ThemedText> Estágio 1 (N1): é a fase mais leve do sono, um estágio de transição entre a vigília e o sono.
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Não-REM (NREM):</ThemedText> Estágio 1 (N1): é a fase mais leve do sono, um estágio de transição entre a vigília e o sono.
           Estágio 2 (N2): O sono se aprofunda, com a frequência cardíaca e a temperatura do corpo diminuindo. 
         </ThemedText>
         <ThemedText style={styles.paragraph}>
-          <ThemedText type="defaultSemiBold">REM:</ThemedText> ° Ocorre em ciclos que se repetem ao longo da noite. 
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>REM:</ThemedText> Ocorre em ciclos que se repetem ao longo da noite. 
           É caracterizado por movimentos rápidos dos olhos, respiração e batimentos cardíacos acelerados, e é a fase em que a maioria dos sonhos vívidos acontece. 
         </ThemedText>
       </View>
 
-      {/* Funções */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Benefícios do Sono</ThemedText>
         <ThemedText style={styles.paragraph}>
@@ -52,25 +48,34 @@ export default function CerebroHumanoScreen() {
         </ThemedText>
       </View>
 
-      {/* Curiosidades */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Curiosidades sobre o Sono</ThemedText>
         <ThemedText style={styles.paragraph}>
-        * Cérebro ativo: O cérebro não descansa durante o sono. Ele organiza memórias, processa emoções e até impulsiona a criatividade. 
+        
+        <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Cérebro ativo: </ThemedText>O cérebro não descansa durante o sono. Ele organiza memórias, processa emoções e até impulsiona a criatividade.{'\n'}</ThemedText>
+        
+        <ThemedText style={styles.paragraph}>
+        
+        <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Fases do sono: </ThemedText>O sono é dividido em quatro fases que se repetem em ciclos de aproximadamente 90 minutos.{'\n'}</ThemedText>
 
-        * Fases do sono: O sono é dividido em quatro fases que se repetem em ciclos de aproximadamente 90 minutos. 
+        <ThemedText style={styles.paragraph}>
 
-        * Paralisia do corpo: Durante os sonhos mais intensos (fase REM), o cérebro está muito ativo, mas o corpo fica paralisado para proteger o indivíduo de "encenar" seus sonhos. 
+        <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Paralisia do corpo: </ThemedText>Durante os sonhos mais intensos (fase REM), o cérebro está muito ativo, mas o corpo fica paralisado para proteger o indivíduo de "encenar" seus sonhos.{'\n'}</ThemedText>
 
-        * Aumento da vontade de comer: A privação do sono pode aumentar a vontade de consumir alimentos gordurosos e açucarados.
+        <ThemedText style={styles.paragraph}>
 
-        * Necessidade de sono: A quantidade de sono necessária varia de pessoa para pessoa e ao longo da vida. Bebês dormem muito mais, enquanto idosos tendem a dormir menos do que os adultos. 
+        <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Aumento da vontade de comer: </ThemedText>A privação do sono pode aumentar a vontade de consumir alimentos gordurosos e açucarados.{'\n'}</ThemedText>
 
-        * Rosto nos sonhos: Nós só podemos sonhar com rostos que já vimos na vida real, mesmo que não nos lembremos de tê-los visto antes.
-        </ThemedText>
+        <ThemedText style={styles.paragraph}>
+
+        <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Necessidade de sono: </ThemedText>A quantidade de sono necessária varia de pessoa para pessoa e ao longo da vida. Bebês dormem muito mais, enquanto idosos tendem a dormir menos do que os adultos.{'\n'}</ThemedText>
+
+        <ThemedText style={styles.paragraph}>
+        
+        <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Rosto nos sonhos: </ThemedText>Nós só podemos sonhar com rostos que já vimos na vida real, mesmo que não nos lembremos de tê-los visto antes.{'\n'}</ThemedText>
+        
       </View>
 
-      {/* Conclusão */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Conclusão</ThemedText>
         <ThemedText style={styles.paragraph}>
@@ -78,7 +83,6 @@ export default function CerebroHumanoScreen() {
         </ThemedText>
       </View>
 
-      {/* Rodapé */}
       <View style={styles.footer}>
         <ThemedText style={styles.footerText}>
           © 2025 — Desenvolvido por Arthur Mota | Projeto sobre o Sono
@@ -93,33 +97,38 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#66CCFF',
   },
+
   header: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#0066FF',
+    backgroundColor: '#0066ffff',
     paddingVertical: 28,
     borderBottomWidth: 2,
-    borderBottomColor: '#A895C9',
+    borderBottomColor: '#0273acff',
   },
+
   headerImage: {
     width: 120,
     height: 120,
     borderRadius: 60,
     marginBottom: 12,
     borderWidth: 2,
-    borderColor: '#BFA7E2',
+    borderColor: '#0273acff',
   },
+
   headerTitle: {
     fontSize: 26,
     fontWeight: 'bold',
-    color: '#3A226E',
+    color: '#004b70ff',
     textAlign: 'center',
   },
+
   headerSubtitle: {
     fontSize: 15,
-    color: '#5D3D9B',
+    color: '#004b70ff',
     opacity: 0.9,
   },
+
   section: {
     paddingHorizontal: 20,
     paddingVertical: 18,
@@ -132,15 +141,17 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
+
   sectionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#37245F', // mais escuro, destaque
+    color: '#004b70ff', 
     marginBottom: 10,
-    textShadowColor: 'rgba(80, 60, 120, 0.25)', // brilho leve
+    textShadowColor: 'rgba(80, 60, 120, 0.25)', 
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 3,
   },
+
   paragraph: {
     fontSize: 16,
     lineHeight: 24,
@@ -148,6 +159,11 @@ const styles = StyleSheet.create({
     textAlign: 'justify',
     marginTop: 8,
   },
+
+  topicTitle: {
+    color: '#004b70ff',
+  },
+
   footer: {
     padding: 20,
     alignItems: 'center',
@@ -156,7 +172,7 @@ const styles = StyleSheet.create({
   },
   footerText: {
     fontSize: 13,
-    color: '#4C2A85',
+    color: '#004b70ff',
     opacity: 0.8,
     textAlign: 'center',
   },
