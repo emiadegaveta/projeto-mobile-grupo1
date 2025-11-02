@@ -50,8 +50,8 @@ export default function HomeScreen() {
         > </InteractiveSection>
 
          <InteractiveSection
-          title="Problemas de saúde"
-          summary="Os principais problemas de saúde, como evitá-los e como afetam o corpo humano."
+          title="Saúde e Bem-Estar"
+          summary="Como uma boa alimentação e exercícios físicos podem melhorar sua qualidade de vida."
           image={require('@/assets/images/problemas.jpg')}
         > </InteractiveSection>
 
@@ -116,7 +116,7 @@ const styles = StyleSheet.create ({
   stepContainer: {
     gap: 12,
     marginBottom: 0,
-    paddingHorizontal: 12,
+    paddingHorizontal: 2,
   },
 
   reactLogo: {
@@ -160,32 +160,45 @@ const styles = StyleSheet.create ({
     borderRadius: 12,
     padding: 12,
     marginBottom: 12,
+    width: '92%',
+    maxWidth: 700,
+    alignSelf: 'center',
+    overflow: 'hidden',
     shadowColor: '#000',
     shadowOpacity: 0.06,
     shadowRadius: 6,
     elevation: 2,
   },
+
   cardHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+
   cardTitle: {
     fontSize: 18,
   },
+
   cardSummary: {
     color: '#',
     marginTop: 6,
     marginBottom: 8,
   },
+
   cardBody: {
     marginTop: 7,
     gap: 8,
   },
+
   cardImage: {
     width: '100%',
-    height: 300,
-    borderRadius: 8,
-    marginTop: 8,
+    maxWidth: 620,
+    height: undefined,
+    aspectRatio: 16 / 9, 
+    borderRadius: 10,
+    marginVertical: 20,
+    alignSelf: 'center',
   },
+
 });
