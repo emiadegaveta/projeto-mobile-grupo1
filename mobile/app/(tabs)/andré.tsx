@@ -53,23 +53,32 @@ export default function MusculacaoAlimentacaoScreen() {
       </View>
 
       <View style={styles.section}>
-        <ThemedText style={styles.sectionTitle}>Grupos Musculares</ThemedText>
-        <ThemedText style={styles.paragraph}>
-          <ThemedText type="defaultSemiBold">Músculos Superiores:{'\n'}</ThemedText>
-          • Peitorais: responsáveis por empurrar e mover os braços{'\n'}
-          • Dorsais (costas): ajudam em puxadas e sustentação da coluna{'\n'}
-          • Deltoides (ombros): dão amplitude e estabilidade aos ombros{'\n'}
-          • Bíceps e tríceps: controlam a flexão e extensão dos braços
-        </ThemedText>
-         <Image
+        <ThemedText style={styles.sectionTitle}>Grupos Musculares - Superiores e Inferiores</ThemedText>
+
+        <ThemedText style={styles.sectionTitle}>Superiores</ThemedText>
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Peitorais: responsáveis por empurrar e mover os braços</ThemedText>
+            <Image
           source={require('@/assets/images/peito.jpg')}
           style={styles.sectionImage}
-        />
-        <Image
+          />
+          {'\n'}
+         
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Dorsais (costas): ajudam em puxadas e sustentação da coluna</ThemedText>
+            <Image
           source={require('@/assets/images/dorsal.jpg')}
           style={styles.sectionImage}
         />
-        <Image
+        {'\n'}
+
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Deltoides (ombros): dão amplitude e estabilidade aos ombros</ThemedText>
+            <Image
+          source={require('@/assets/images/del.jpg')}
+          style={styles.sectionImage}
+        />
+        {'\n'}
+        
+        <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Bíceps e tríceps: controlam a flexão e extensão dos braços</ThemedText>
+          <Image
           source={require('@/assets/images/bíceps.webp')}
           style={styles.sectionImage}
         />
@@ -78,16 +87,35 @@ export default function MusculacaoAlimentacaoScreen() {
           style={styles.sectionImage}
         />
         
-        <ThemedText style={[styles.paragraph, styles.topSpacing]}>
-          <ThemedText type="defaultSemiBold">Músculos Inferiores:{'\n'}</ThemedText>
-          • Quadríceps: fundamentais para correr, agachar e saltar{'\n'}
-          • Glúteos: estabilizam a pelve e ajudam na extensão dos quadris{'\n'}
-          • Isquiotibiais: auxiliam na flexão dos joelhos{'\n'}
-          • Panturrilhas: controlam o impulso e movimentação dos pés
-        </ThemedText>
+          <ThemedText style={styles.sectionTitle}>Inferiores</ThemedText>
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Quadríceps: fundamentais para correr, agachar e saltar</ThemedText>
+            <Image
+          source={require('@/assets/images/quadríceps.jpg')}
+          style={styles.sectionImage}
+          />
+          {'\n'}
+         
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Glúteos: estabilizam a pelve e ajudam na extensão dos quadris</ThemedText>
+            <Image
+          source={require('@/assets/images/bunda].jpg')}
+          style={styles.sectionImage}
+        />
+        {'\n'}
+
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Isquiotibiais: auxiliam na flexão dos joelhos</ThemedText>
+            <Image
+          source={require('@/assets/images/isquioslaoq.webp')}
+          style={styles.sectionImage}
+        />
+        {'\n'}
+        
+        <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Panturrilhas: controlam o impulso e movimentação dos pés</ThemedText>
+          <Image
+          source={require('@/assets/images/panturrilha.jpg')}
+          style={styles.sectionImage}
+        />
       </View>
 
-      {/* Alimentação */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Alimentação e Performance</ThemedText>
         <ThemedText style={styles.paragraph}>
@@ -95,7 +123,7 @@ export default function MusculacaoAlimentacaoScreen() {
           melhora a recuperação e ajuda na hipertrofia.
         </ThemedText>
         <ThemedText style={[styles.paragraph, styles.topSpacing]}>
-          <ThemedText type="defaultSemiBold">Recomendações Nutricionais:{'\n'}</ThemedText>
+          <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Recomendações Nutricionais:{'\n'}</ThemedText>
           • Proteínas: essenciais para reconstrução muscular (frango, ovos, peixe){'\n'}
           • Carboidratos complexos: fornecem energia (arroz integral, batata-doce){'\n'}
           • Gorduras boas: equilibram hormônios (abacate, azeite, castanhas){'\n'}
@@ -103,7 +131,6 @@ export default function MusculacaoAlimentacaoScreen() {
         </ThemedText>
       </View>
 
-      {/* Dicas */}
       <View style={styles.section}>
         <ThemedText style={styles.sectionTitle}>Dicas Práticas</ThemedText>
         <ThemedText style={styles.paragraph}>
@@ -114,7 +141,6 @@ export default function MusculacaoAlimentacaoScreen() {
         </ThemedText>
       </View>
 
-      {/* Rodapé */}
       <View style={styles.footer}>
         <ThemedText style={styles.footerText}>
           © 2025 — Desenvolvido por André | Projeto de Musculação e Nutrição
@@ -127,24 +153,27 @@ export default function MusculacaoAlimentacaoScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F5F5F5',
+    backgroundColor: '#ffb065ff',
   },
+
   header: {
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#8A2BE2',
+    backgroundColor: '#fd7a00ff',
     paddingVertical: 28,
     borderBottomWidth: 2,
-    borderBottomColor: '#7B1FA2',
+    borderBottomColor: '#e95500ff',
   },
+
   headerImage: {
     width: 120,
     height: 120,
     borderRadius: 60,
     marginBottom: 12,
     borderWidth: 2,
-    borderColor: '#B39DDB',
+    borderColor: '#e95500ff',
   },
+
   headerTitle: {
     fontSize: 26,
     fontWeight: 'bold',
@@ -154,11 +183,13 @@ const styles = StyleSheet.create({
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 4,
   },
+
   headerSubtitle: {
     fontSize: 15,
-    color: '#E1BEE7',
+    color: '#FFFFFF',
     opacity: 0.9,
   },
+  
   section: {
     paddingHorizontal: 20,
     paddingVertical: 18,
@@ -171,39 +202,55 @@ const styles = StyleSheet.create({
     shadowRadius: 4,
     elevation: 2,
   },
+
   sectionTitle: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#4A148C',
+    color: '#e95500ff',
     marginBottom: 10,
     textShadowColor: 'rgba(74, 20, 140, 0.1)',
     textShadowOffset: { width: 1, height: 1 },
     textShadowRadius: 2,
   },
+  
+  topicTitle: {
+    color: '#ffa600ff',
+    fontSize: 16,
+    marginTop: 12,
+    fontWeight: '600',
+  },
+
   sectionImage: {
     width: '100%',
-    height: 200,
+    maxWidth: 420,
+    height: undefined,
+    aspectRatio: 16 / 9, 
     borderRadius: 10,
-    marginVertical: 16,
+    marginVertical: 20,
+    alignSelf: 'auto',
   },
+
   paragraph: {
     fontSize: 16,
     lineHeight: 24,
     color: '#424242',
     textAlign: 'justify',
   },
+  
   topSpacing: {
     marginTop: 16,
   },
+
   footer: {
     padding: 20,
     alignItems: 'center',
-    backgroundColor: '#8A2BE2',
+    backgroundColor: '#fd7a00ff',
     marginTop: 16,
   },
+
   footerText: {
     fontSize: 13,
-    color: '#E1BEE7',
+    color: '#FFFFFF',
     opacity: 0.8,
     textAlign: 'center',
   },
