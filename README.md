@@ -4,10 +4,10 @@
 Abaixo, temos a lista dos integrantes do grupo e desenvolvedores deste projeto 
 
  Emilly Silva do Nascimento;  
- André de Lima Nogueira da Cruz;
- Arthur Mota do Prado;
- Davi da Conceição de Freitas;
- Nicollas Gabriel Rodrigues.
+ André de Lima Nogueira da Cruz;  
+ Arthur Mota do Prado;   
+ Davi da Conceição de Freitas;   
+ Nicollas Gabriel Rodrigues.   
 
 Nosso aplicativo foi desenvolvido ao longo de 3 meses, com sprints semanais, com pelo menos 4 sprints tendo sido "dadas de graça" pelo professor. 
 O projeto foi feito apenas com React Native — dividido em 5 páginas, sendo que cada integrante ficou responsável por uma delas.  
