@@ -1,5 +1,5 @@
-import { Image } from 'expo-image';
-import { Platform, StyleSheet, Pressable, View } from 'react-native';
+import { Image } from 'react-native'; // ✅ trocado de 'expo-image' para 'react-native'
+import { StyleSheet, Pressable, View } from 'react-native';
 import { useState } from 'react';
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
@@ -9,14 +9,12 @@ import { ThemedView } from '@/components/ThemedView';
 export default function HomeScreen() {
   return (
     <ParallaxScrollView
-    headerBackgroundColor={{ light: '#7B0BE0', dark: '#7B0BE0' }}
-      headerImage={ 
+      headerBackgroundColor={{ light: '#7B0BE0', dark: '#7B0BE0' }}
+      headerImage={
         <Image
           source={require('@/assets/images/coração.png')}
           style={styles.reactLogo}
-          contentFit="contain"
-          transition={300}
-        /> 
+        />
       }>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Bem-Vindo(a)</ThemedText>
@@ -31,43 +29,32 @@ export default function HomeScreen() {
 
       <ThemedView style={styles.stepContainer}>
         <ThemedText type="title">Confira os assuntos abordados:</ThemedText>
+
         <InteractiveSection
           title="Cérebro Humano"
           summary="Entenda como manter o cérebro saudável e como isso impacta o corpo."
           image={require('@/assets/images/cerebelo.webp')}
-        > </InteractiveSection>
+        />
 
         <InteractiveSection
           title="Músculos e Alimentação saudável"
           summary="Saiba a importância de uma boa alimentação e como ela afeta os músculos."
           image={require('@/assets/images/salada.jpg')}
-        > </InteractiveSection>
+        />
 
         <InteractiveSection
           title="Saúde do Sono"
           summary="Por que o sono é vital para a saúde geral do corpo e da mente."
           image={require('@/assets/images/sono.webp')}
-        > </InteractiveSection>
+        />
 
-         <InteractiveSection
+        <InteractiveSection
           title="Saúde e Bem-Estar"
           summary="Como uma boa alimentação e exercícios físicos podem melhorar sua qualidade de vida."
           image={require('@/assets/images/problemas.jpg')}
-        > </InteractiveSection>
-
+        />
       </ThemedView>
-
-      <ThemedView style={styles.stepContainer}>
-      </ThemedView>
-      </ParallaxScrollView>
-   );
-}
-
-function ActionButton({ label, onPress }: { label: string; onPress: () => void }) {
-  return (
-    <Pressable style={({ pressed }) => [styles.actionButton, pressed && styles.actionButtonPressed]} onPress={onPress}>
-      <ThemedText type="defaultSemiBold" style={styles.actionLabel}>{label}</ThemedText>
-    </Pressable>
+    </ParallaxScrollView>
   );
 }
 
@@ -79,7 +66,7 @@ function InteractiveSection({
 }: {
   title: string;
   summary?: string;
-  children: React.ReactNode;
+  children?: React.ReactNode;
   image?: any;
 }) {
   const [open, setOpen] = useState(false);
@@ -97,7 +84,7 @@ function InteractiveSection({
         <View style={styles.cardBody}>
           {children}
           {image && (
-            <Image source={image} style={styles.cardImage} contentFit="cover" transition={200} />
+            <Image source={image} style={styles.cardImage} resizeMode="cover" />
           )}
         </View>
       )}
@@ -105,56 +92,27 @@ function InteractiveSection({
   );
 }
 
-const styles = StyleSheet.create ({
-
+const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
   },
-
   stepContainer: {
     gap: 12,
     marginBottom: 0,
     paddingHorizontal: 2,
   },
-
   reactLogo: {
-   aspectRatio: 3,
-   bottom: 0,
-   resizeMode: 'contain',
-   width: '100%',
-   height: 220,     
-   position: 'absolute',
-   top: 20,
-   left: 0,
+    aspectRatio: 3,
+    bottom: 0,
+    resizeMode: 'contain',
+    width: '100%',
+    height: 220,
+    position: 'absolute',
+    top: 20,
+    left: 0,
   },
-
-  actionsRow: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingHorizontal: 12,
-    marginVertical: 12,
-    gap: 8,
-  },
-
-  actionButton: {
-    flex: 1,
-    backgroundColor: '#EDE7F6',
-    paddingVertical: 10,
-    marginHorizontal: 4,
-    borderRadius: 50,
-    alignItems: 'center',
-  },
-
-  actionButtonPressed: {
-    opacity: 0.8,
-  },
-
-  actionLabel: {
-    color: '#4B0082',
-  },
-
   card: {
     backgroundColor: '#7B0BE0',
     borderRadius: 12,
@@ -169,36 +127,29 @@ const styles = StyleSheet.create ({
     shadowRadius: 6,
     elevation: 2,
   },
-
   cardHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-
   cardTitle: {
     fontSize: 18,
   },
-
   cardSummary: {
-    color: '#',
+    color: '#FFFFFF', // ✅ corrigido
     marginTop: 6,
     marginBottom: 8,
   },
-
   cardBody: {
     marginTop: 7,
     gap: 8,
   },
-
   cardImage: {
     width: '100%',
     maxWidth: 620,
-    height: undefined,
-    aspectRatio: 16 / 9, 
+    aspectRatio: 16 / 9,
     borderRadius: 10,
     marginVertical: 20,
     alignSelf: 'center',
   },
-
 });
