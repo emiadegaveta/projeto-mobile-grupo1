@@ -47,7 +47,7 @@ export default function MusculacaoAlimentacaoScreen() {
           • Músculo cardíaco: exclusivo do coração, trabalha de forma contínua.
         </ThemedText>
          <Image
-          source={require('@/assets/images/típos de músculos.jpg')}
+          source={require('@/assets/images/tipos.jpg')}
           style={styles.sectionImage}
         />
       </View>
@@ -79,25 +79,25 @@ export default function MusculacaoAlimentacaoScreen() {
         
         <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Bíceps e tríceps: controlam a flexão e extensão dos braços</ThemedText>
           <Image
-          source={require('@/assets/images/bíceps.webp')}
+          source={require('@/assets/images/biceps.webp')}
           style={styles.sectionImage}
         />
         <Image
-          source={require('@/assets/images/tríceps.jpg')}
+          source={require('@/assets/images/triceps.jpg')}
           style={styles.sectionImage}
         />
         
           <ThemedText style={styles.sectionTitle}>Inferiores</ThemedText>
           <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Quadríceps: fundamentais para correr, agachar e saltar</ThemedText>
             <Image
-          source={require('@/assets/images/quadríceps.jpg')}
+          source={require('@/assets/images/quadriceps.jpg')}
           style={styles.sectionImage}
           />
           {'\n'}
          
           <ThemedText type="defaultSemiBold" style={styles.topicTitle}>Glúteos: estabilizam a pelve e ajudam na extensão dos quadris</ThemedText>
             <Image
-          source={require('@/assets/images/bunda].jpg')}
+          source={require('@/assets/images/bunda.jpg')}
           style={styles.sectionImage}
         />
         {'\n'}
