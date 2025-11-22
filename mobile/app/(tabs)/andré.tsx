@@ -1,6 +1,6 @@
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { Image } from 'expo-image';
+import { Image } from 'react-native';
 import { ScrollView, StyleSheet, View } from 'react-native';
 
 export default function MusculacaoAlimentacaoScreen() {
