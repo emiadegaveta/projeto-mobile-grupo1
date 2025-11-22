@@ -1,22 +1,20 @@
-<<<<<<< HEAD
-=======
 
 ###### Sobre o nosso aplicativo
 **Saúde e Bem-Estar** é um site informativo sobre a saúde e como fazer para ter mais qualidade de vida, adotar medidas e hábitos mais saudáveis, como cuidar do sono, do corpo e da mente.
 Abaixo, temos a lista dos integrantes do grupo e desenvolvedores deste projeto 
- 
-✪ ;  
-✪ "GustavoRocodaio" (não é um integrante e nem faz parte do trabalho, foi apenas um erro ao deletar a credencial do usuário anterior ao logar);  
-✪ Flávio dos Santos Gomes;  
-✪ Emilly Silva do Nascimento;  
-✪ André de Lima Nogueira da Cruz.  
 
-Nosso aplicativo foi desenvolvido ao longo de 2 meses, com sprints semanais, com pelo menos 4 sprints tendo sido "dadas de graça" pelo professor. 
+ Emilly Silva do Nascimento;  
+ André de Lima Nogueira da Cruz;  
+ Arthur Mota do Prado;   
+ Davi da Conceição de Freitas;   
+ Nicollas Gabriel Rodrigues.   
+
+Nosso aplicativo foi desenvolvido ao longo de 3 meses, com sprints semanais, com pelo menos 4 sprints tendo sido "dadas de graça" pelo professor. 
 O projeto foi feito apenas com React Native — dividido em 5 páginas, sendo que cada integrante ficou responsável por uma delas.  
 Em nosso repositório, é possível perceber que os arquivos possuem a identificação de cada página e seu responsável.
 
-#### ₊ ⊹ Página Inicial - Emilly
-Aqui apresenta-se um breve resumo do que cada página irá abordar, atravéz de cards informativos que acompanham uma imagem 
+₊ ⊹ Página Inicial - Emilly
+Aqui apresenta-se um breve resumo do que cada página irá abordar, atravéz de cards informativos que acompanham uma imagem referente a cada tema.
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
  <div>
@@ -74,6 +72,4 @@ Esta página fala sobre o tema Saúde e Bem-Estar, e aborda como a alimentação
 </div><br>
 
 ### ⋆˚꩜｡ Agradecimentos  
-Agradecemos a todos os participantes e apoiadores do projeto, e ao professor Mateus Maidel pela proposta, que nos permitiu conhecer novas ferramentas e aprimorar nossos conhecimentos sobre  React Native, Componentização e implementação de API's.
-
->>>>>>> b175ee53010a424f2e885e9910d709f2d722e241
+Agradecemos a todos os participantes e apoiadores do projeto, e ao professor Mateus Maidel pela proposta, que nos permitiu conhecer novas ferramentas e aprimorar nossos conhecimentos sobre React Native, Componentização e Implementação de API's.
